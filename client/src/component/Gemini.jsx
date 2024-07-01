@@ -12,7 +12,7 @@ function Gemini({ dataPrompt }) {
     const prompt = `${dataPrompt}\n\n${hardcodedPrompt}`;
     try {
       setLoading(true);
-      const res = await axios.post('http://localhost:3000/api/gemini/generate', { prompt });
+      const res = await axios.post('https://ai-for-change-hackathon-1.onrender.com/api/gemini/generate', { prompt });
       setResponse(res.data.response);
       setLoading(false);
     } catch (error) {
