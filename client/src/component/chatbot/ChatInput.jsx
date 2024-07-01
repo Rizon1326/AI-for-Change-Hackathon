@@ -10,7 +10,7 @@ function ChatInput({ addMessage }) {
       addMessage(input);  // Add user's message immediately
       setInput('');  // Clear the input field
       try {
-        const response = await axios.post('http://localhost:3000/api/gemini/chat', { message: input });
+        const response = await axios.post('https://ai-for-change-hackathon-1.onrender.com/api/gemini/chat', { message: input });
         addMessage(response.data.response, false);
       } catch (error) {
         console.error('Error sending message:', error);
