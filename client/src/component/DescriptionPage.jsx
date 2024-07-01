@@ -15,7 +15,7 @@ const DescriptionPage = () => {
   useEffect(() => {
     const fetchWeather = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/weather?lat=${lat}&lon=${lng}`);
+        const response = await axios.get(`https://ai-for-change-hackathon-1.onrender.com/api/weather?lat=${lat}&lon=${lng}`);
         setWeather(response.data.weather);
         setAirPollution(response.data.airPollution);
         setSoil(response.data.soil);
